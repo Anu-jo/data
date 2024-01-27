@@ -10,7 +10,7 @@ from pyspark.sql.functions import col,isnan,when,count
 import warnings
 warnings.filterwarnings("ignore")
 spark = SparkSession.builder.appName("dataPreprocessing").getOrCreate()
-df = spark.read.csv('C:/Users/anujo/Desktop/M.Sc data science/big data/healthcare-dataset-stroke-data.csv', header=True, inferSchema=True)
+df = spark.read.csv('healthcare-dataset-stroke-data.csv', header=True, inferSchema=True)
 df.printSchema()
 df.show()
 df_column=["bmi","smoking_status"]
